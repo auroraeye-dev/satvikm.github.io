@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Satvik Mishra | Personal Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #1e293b;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      color: #38bdf8;
+      letter-spacing: 1.2px;
+    }
+    .degree {
+      text-align: center;
+      width: 100%;
+      display: block;
+    }
+    header p {
+      margin: 0.4rem 0;
+      font-size: 1.1rem;
+      color: #94a3b8;
+      text-align: center;
+    }
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 2rem auto 3rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    h2 {
+      color: #7dd3fc;
+      margin-top: 2.5rem;
+      border-bottom: 2px solid #38bdf8;
+      padding-bottom: 0.3rem;
+      font-weight: 600;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .project {
+      background-color: #1e293b;
+      border-left: 4px solid #38bdf8;
+      padding: 1.2rem 1rem;
+      margin: 1.8rem auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      max-width: 700px;
+      text-align: left;
+    }
+    .project h3 {
+      margin: 0 0 0.4rem 0;
+      color: #bae6fd;
+      font-size: 1.4rem;
+    }
+    .project p {
+      margin: 0;
+      color: #d1d5db;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 0.6rem;
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .project a:hover,
+    .project a:focus {
+      color: #60a5fa;
+      text-decoration: underline;
+    }
+    .connect {
+      margin-top: 3rem;
+      font-size: 1.1rem;
+      color: #94a3b8;
+    }
+    .connect a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 0 0.7rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .connect a:hover,
+    .connect a:focus {
+      color: #60a5fa;
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #64748b;
+      border-top: 1px solid #334155;
+      font-size: 0.9rem;
+      background-color: #1e293b;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        margin: 1rem;
+      }
+      .project {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Satvik Mishra</h1>
+    <div class="degree">
+      B.Tech in Production and Industrial Engineering | Delhi Technological University (formerly Delhi College of Engineering)
+    </div>
+    <p>Location: Delhi, India</p>
+  </header>
+  <main>
+    <section>
+      <h2>My Vision</h2>
+      <p>
+        I envision delving into the deeper dimensions of cybersecurity and IT infrastructure, exploring complex systems and underlying principles that drive secure and scalable solutions. My aim is to design, build, and optimize robust architectures that not only protect but also enhance digital operations in today’s interconnected world. By combining my engineering foundation with continuous learning in modern technologies, I seek to contribute meaningfully to resilient and forward-looking tech ecosystems.
+      </p>
+    </section>
+    <section>
+      <h2>Systems I’ve Designed</h2>
+      <div class="project">
+        <h3>Secure VPN Deployment</h3>
+        <p>This project demonstrates the setup and configuration of a Virtual Private Network (VPN) using strongSwan, focusing on secure key exchange and encryption. The VPN is configured with AES-128 encryption and Diffie-Hellman Group 2 (1024-bit key), ensuring strong security standards. The setup involves installing and configuring strongSwan on a Linux system, generating and exchanging keys, editing the ipsec.conf and ipsec.secrets files for proper tunnel creation, and testing the VPN connection using ipsec status and ipsec up commands. The result is a successfully encrypted tunnel between two machines, providing a secured channel over an insecure network. This implementation can be extended for site-to-site VPNs or remote user access and lays the foundation for secure communication in enterprise environments.</p>
+        <a href="#" target="_blank" rel="noopener noreferrer">Download My Setup Guide</a>
+      </div>
+      <div class="project">
+        <h3>AWS Deployment and Monitoring Automation using VS Code</h3>
+        <p>his project outlines the deployment and automation of an AWS cloud-based architecture using Visual Studio Code and various AWS services. It involves setting up an EC2 instance, configuring AWS CLI credentials, and using IAM roles, S3 buckets, and CloudWatch for automation and monitoring. The developer writes scripts in VS Code to automate instance creation, upload logs to S3, and monitor system health metrics via CloudWatch. Security is managed using IAM policies and encrypted credentials. The goal is to streamline DevOps workflows by integrating development (VS Code) and cloud infrastructure (AWS). The project also includes real-time alerts using CloudWatch alarms, helping maintain uptime and resource efficiency. This setup is ideal for small-to-medium enterprise automation and serves as a prototype for scalable, cloud-native application management.
+
+</p>
+        <a href="#" target="_blank" rel="noopener noreferrer">Download My Deployment Tips</a>
+      </div>
+    </section>
+    <section class="connect">
+      <h2>Let's Connect</h2>
+      <p>
+        <a href="https://www.linkedin.com/in/satvik-mishra-aa18062aa" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+        <a href="https://github.com/auroraeye-dev" target="_blank" rel="noopener noreferrer">GitHub</a> |
+        <a href="">Email Me</a>
+      </p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Satvik Mishra | Portfolio
+  </footer>
+</body>
+</html>
