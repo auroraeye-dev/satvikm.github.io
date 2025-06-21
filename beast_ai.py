@@ -33,25 +33,11 @@ def aiprocess(command):
 
     return completion.choices[0].message.content
 
-def try_skip_ad(image_path, timeout=30):
-    print("Looking for Skip Ad button...")
-    start = time.time()
-    match = None
-    while time.time() - start < timeout:
-        try:
-            match = pyautogui.locateCenterOnScreen(image_path, confidence=0.7)
-        except pyautogui.ImageNotFoundException:
-            print("Skip Ad button not found in current frame.")
-            match = None
-
-        if match:
-            print(f"Skip Ad found at {match}. Clicking...")
-            pyautogui.moveTo(match)
-            pyautogui.click()
-            break
-        else:
-            print("Not found yet... retrying")
-        time.sleep(2)
+def try_skip_ad(image_path="YOUR_IMAGE_PATH.png", timeout=15):
+    """
+    Placeholder version. Full skip logic hidden for privacy.
+    """
+    print("Ad skipping feature is private and not included in this public version.")
 
     if not match:
         print("No Skip Ad button found after 30 seconds. Carrying on...")
