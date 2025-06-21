@@ -1,6 +1,6 @@
 # import google.generativeai as genai
 
-# genai.configure(api_key="AIzaSyBUFRn8YOvrtFfahaT0bOj4KOUJJrbzOQU")
+# genai.configure(api_key="your_api_key")
 
 # model = genai.GenerativeModel("gemini-1.5-pro")
 # response = model.generate_content("Give a short overview of machine learning.")
