@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Satvik Mishra | Secure Architecture Portfolio</title>
+<title>Satvik Mishra | Cybersecurity × Quant Finance</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -50,9 +50,6 @@ h1,h2,h3,.font-heading {
     0 0 25px rgba(56,189,248,0.15);
 }
 
-.glow-sky { box-shadow: 0 0 25px rgba(56,189,248,0.25); }
-.glow-emerald { box-shadow: 0 0 25px rgba(16,185,129,0.25); }
-
 @keyframes slow-pulse {
   0%,100% { transform: scale(1); opacity: 0.3; }
   50% { transform: scale(1.1); opacity: 0.45; }
@@ -60,13 +57,12 @@ h1,h2,h3,.font-heading {
 .animate-slow-pulse {
   animation: slow-pulse 8s ease-in-out infinite;
 }
-
 @keyframes scan {
   from { transform: translateY(-100%); }
   to { transform: translateY(1000%); }
 }
 
-/* subtle grain */
+/* grain */
 body::before {
   content:"";
   position:fixed;
@@ -98,15 +94,15 @@ body::before {
       <a href="#home" class="hover:text-sky-400">Home</a>
       <a href="#vision" class="hover:text-sky-400">Vision</a>
       <a href="#projects" class="hover:text-sky-400">Projects</a>
-      <a href="#certs" class="hover:text-sky-400">Certs</a>
       <a href="#contact" class="hover:text-sky-400">Connect</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="home" class="pt-32 pb-20 px-6 text-center relative z-10">
-  <div class="max-w-4xl mx-auto space-y-8">
+<section id="home" class="pt-32 pb-24 px-6 text-center relative z-10">
+  <div class="max-w-4xl mx-auto space-y-10">
+
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase">
       <span class="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
       Cybersecurity • Quant Finance • Fintech
@@ -119,13 +115,27 @@ body::before {
       </span>
     </h1>
 
-    <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light">
+    <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
       B.Tech in Production & Industrial Engineering from
-      <span class="text-white">Delhi Technological University</span>.
-      Bridging <span class="text-sky-400">robust cybersecurity</span> with
-      <span class="text-amber-400"> quantitative finance</span> to architect
-      secure, scalable fintech systems.
+      <span class="text-slate-200">Delhi Technological University</span>.
+      Bridging the gap between
+      <span class="text-sky-400 font-medium">robust cybersecurity</span> and
+      <span class="text-amber-400 font-medium"> high-precision quantitative finance</span>.
+      I architect secure, scalable, and intelligent fintech infrastructures where
+      performance, security, and resilience coexist by design.
     </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+      <a href="#projects"
+         class="px-8 py-3 bg-sky-600 hover:bg-sky-500 text-white font-semibold rounded-lg transition-all shadow-lg shadow-sky-500/20">
+        View My Systems
+      </a>
+      <a href="#contact"
+         class="px-8 py-3 glass glass-hover text-slate-200 font-semibold rounded-lg border border-amber-500/20">
+        Let’s Connect
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -136,7 +146,7 @@ body::before {
 
     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-      <div class="glass glass-hover glow-sky p-8">
+      <div class="glass glass-hover p-8">
         <span class="text-sky-400 text-xs font-bold uppercase">Cybersecurity</span>
         <h3 class="text-xl font-bold mt-4">Secure VPN Deployment</h3>
         <p class="text-slate-400 text-sm mt-4 leading-relaxed">
@@ -147,36 +157,38 @@ body::before {
         </p>
       </div>
 
-      <div class="glass glass-hover glow-emerald p-8">
+      <div class="glass glass-hover p-8">
         <span class="text-purple-400 text-xs font-bold uppercase">AI</span>
         <h3 class="text-xl font-bold mt-4">Beast Voice AI</h3>
         <p class="text-slate-400 text-sm mt-4 leading-relaxed">
           A personal voice assistant built from the ground up using Python. It integrates
-          Google Speech Recognition, OpenAI’s GPT-3.5, and PyAutoGUI. Features a specialized
-          YouTube ad-skipper using real-time screen detection and custom web automation routines.
+          Google Speech Recognition, OpenAI’s GPT-3.5, and PyAutoGUI, featuring a
+          YouTube ad-skipper via real-time screen detection and automation routines.
         </p>
       </div>
 
-      <div class="glass glass-hover p-8">
-        <span class="text-indigo-400 text-xs font-bold uppercase">Cloud</span>
-        <h3 class="text-xl font-bold mt-4">AWS Deployment & Monitoring Automation</h3>
-        <p class="text-slate-400 text-sm mt-4 leading-relaxed">
-          Automation of AWS cloud-based architecture using VS Code. Involves EC2 instance
-          setup, S3 log management, IAM roles, and real-time health monitoring via
-          CloudWatch alarms to maintain resource efficiency.
-        </p>
-      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="glass glass-hover p-8">
-        <span class="text-emerald-400 text-xs font-bold uppercase">Data</span>
-        <h3 class="text-xl font-bold mt-4">Enterprise Data Architecture</h3>
-        <p class="text-slate-400 text-sm mt-4 leading-relaxed">
-          Comprehensive documentation of modern data architectures, covering Data Warehouses,
-          Lakes, and Lakehouses with Medallion Architecture. Bridges theory with cloud-native,
-          scalable data platform design.
-        </p>
-      </div>
+<!-- CONNECT -->
+<section id="contact" class="py-32 px-6 relative z-10">
+  <div class="max-w-4xl mx-auto glass glass-hover p-12 text-center">
+    <h2 class="text-4xl font-bold mb-6">Connect for Infrastructure Strategy</h2>
+    <p class="text-slate-400 mb-12 text-lg font-light">
+      Collaborating on
+      <span class="text-sky-400">secure fintech</span>,
+      <span class="text-amber-400"> quantitative systems</span>, and
+      <span class="text-emerald-400"> scalable data infrastructure</span>.
+    </p>
 
+    <div class="flex flex-wrap justify-center gap-12 text-sm">
+      <a href="https://www.linkedin.com/in/satvik-mishra-aa18062aa"
+         class="text-sky-400 hover:underline">LinkedIn</a>
+      <a href="https://github.com/auroraeye-dev"
+         class="text-slate-200 hover:underline">GitHub</a>
+      <a href="mailto:contact@satvikmishra.com"
+         class="text-amber-400 hover:underline">Email</a>
     </div>
   </div>
 </section>
