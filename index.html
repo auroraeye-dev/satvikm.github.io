@@ -13,27 +13,67 @@
 
 <style>
 html { scroll-behavior: smooth; }
+
 body {
   font-family: 'Inter', sans-serif;
-  background:#020617;
-  overflow-x:hidden;
+  background: #020617;
+  overflow-x: hidden;
 }
+
 h1,h2,h3,.font-heading {
-  font-family:'Space Grotesk',sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
+
+/* ===== GLASSMORPHISM ===== */
 .glass {
-  background:rgba(15,23,42,.6);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,.08);
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.02)
+  );
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+  border-radius: 1.25rem;
 }
+
+.glass-hover {
+  transition: all 0.45s ease;
+}
+.glass-hover:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.55),
+    0 0 25px rgba(56,189,248,0.15);
+}
+
+.glow-sky { box-shadow: 0 0 25px rgba(56,189,248,0.25); }
+.glow-emerald { box-shadow: 0 0 25px rgba(16,185,129,0.25); }
+
 @keyframes slow-pulse {
-  0%,100%{transform:scale(1);opacity:.3}
-  50%{transform:scale(1.1);opacity:.45}
+  0%,100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.1); opacity: 0.45; }
 }
-.animate-slow-pulse { animation:slow-pulse 8s ease-in-out infinite; }
+.animate-slow-pulse {
+  animation: slow-pulse 8s ease-in-out infinite;
+}
+
 @keyframes scan {
   from { transform: translateY(-100%); }
   to { transform: translateY(1000%); }
+}
+
+/* subtle grain */
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:1;
 }
 </style>
 </head>
@@ -49,9 +89,11 @@ h1,h2,h3,.font-heading {
 </div>
 
 <!-- NAVBAR -->
-<nav class="fixed top-0 w-full z-50 glass px-6 py-4 border-b border-white/5">
+<nav class="fixed top-0 w-full z-50 glass px-6 py-4 border-b border-white/10">
   <div class="max-w-6xl mx-auto flex justify-between items-center">
-    <div class="text-2xl font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">SM.</div>
+    <div class="text-2xl font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">
+      SM.
+    </div>
     <div class="flex gap-8 text-sm text-slate-400">
       <a href="#home" class="hover:text-sky-400">Home</a>
       <a href="#vision" class="hover:text-sky-400">Vision</a>
@@ -80,21 +122,10 @@ h1,h2,h3,.font-heading {
     <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light">
       B.Tech in Production & Industrial Engineering from
       <span class="text-white">Delhi Technological University</span>.
-      Architecting <span class="text-sky-400">secure</span>,
-      <span class="text-amber-400">quant-driven</span> fintech systems.
+      Bridging <span class="text-sky-400">robust cybersecurity</span> with
+      <span class="text-amber-400"> quantitative finance</span> to architect
+      secure, scalable fintech systems.
     </p>
-  </div>
-</section>
-
-<!-- VISION -->
-<section id="vision" class="py-24 px-6 relative z-10">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12">Strategic Vision</h2>
-    <div class="glass rounded-2xl p-10 font-mono text-sm space-y-6">
-      <p><span class="text-sky-400">01</span> Cybersecurity as a performance catalyst for financial systems.</p>
-      <p><span class="text-amber-400">02</span> Fintech architectures resilient to attackers and volatility.</p>
-      <p><span class="text-emerald-400">03</span> DevOps pipelines optimized for security-first scale.</p>
-    </div>
   </div>
 </section>
 
@@ -105,66 +136,47 @@ h1,h2,h3,.font-heading {
 
     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-      <div class="glass p-8 rounded-2xl border border-white/5">
+      <div class="glass glass-hover glow-sky p-8">
         <span class="text-sky-400 text-xs font-bold uppercase">Cybersecurity</span>
         <h3 class="text-xl font-bold mt-4">Secure VPN Deployment</h3>
-        <p class="text-slate-400 text-sm mt-4">
-          StrongSwan IPsec VPN using AES encryption and Diffie–Hellman key exchange.
+        <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+          Setup and configuration of a Virtual Private Network (VPN) using strongSwan,
+          focusing on secure key exchange and encryption. Configured with AES-128
+          encryption and Diffie-Hellman Group 2, ensuring strong security standards
+          for site-to-site tunnels.
         </p>
       </div>
 
-      <div class="glass p-8 rounded-2xl border border-white/5">
+      <div class="glass glass-hover glow-emerald p-8">
         <span class="text-purple-400 text-xs font-bold uppercase">AI</span>
         <h3 class="text-xl font-bold mt-4">Beast Voice AI</h3>
-        <p class="text-slate-400 text-sm mt-4">
-          Python-based voice assistant with GPT integration and automation.
+        <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+          A personal voice assistant built from the ground up using Python. It integrates
+          Google Speech Recognition, OpenAI’s GPT-3.5, and PyAutoGUI. Features a specialized
+          YouTube ad-skipper using real-time screen detection and custom web automation routines.
         </p>
       </div>
 
-      <div class="glass p-8 rounded-2xl border border-white/5">
+      <div class="glass glass-hover p-8">
         <span class="text-indigo-400 text-xs font-bold uppercase">Cloud</span>
-        <h3 class="text-xl font-bold mt-4">AWS Deployment & Monitoring</h3>
-        <p class="text-slate-400 text-sm mt-4">
-          EC2, IAM, CloudWatch automation and monitoring workflows.
+        <h3 class="text-xl font-bold mt-4">AWS Deployment & Monitoring Automation</h3>
+        <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+          Automation of AWS cloud-based architecture using VS Code. Involves EC2 instance
+          setup, S3 log management, IAM roles, and real-time health monitoring via
+          CloudWatch alarms to maintain resource efficiency.
         </p>
       </div>
 
-      <div class="glass p-8 rounded-2xl border border-white/5">
+      <div class="glass glass-hover p-8">
         <span class="text-emerald-400 text-xs font-bold uppercase">Data</span>
         <h3 class="text-xl font-bold mt-4">Enterprise Data Architecture</h3>
-        <p class="text-slate-400 text-sm mt-4">
-          Data lakes, lakehouses, and medallion architecture design.
+        <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+          Comprehensive documentation of modern data architectures, covering Data Warehouses,
+          Lakes, and Lakehouses with Medallion Architecture. Bridges theory with cloud-native,
+          scalable data platform design.
         </p>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certs" class="py-24 px-6 relative z-10">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-16">Professional Credentials</h2>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="glass p-6 rounded-xl">Certified in Cybersecurity (ISC2)</div>
-      <div class="glass p-6 rounded-xl">FMVA – Financial Modeling (CFI)</div>
-      <div class="glass p-6 rounded-xl">FTIP – Fintech Professional (CFI)</div>
-      <div class="glass p-6 rounded-xl">Oracle AI Vector Search</div>
-      <div class="glass p-6 rounded-xl">OCI AI Foundations</div>
-      <div class="glass p-6 rounded-xl">OCI Foundations</div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-32 px-6 relative z-10">
-  <div class="max-w-4xl mx-auto glass p-12 rounded-3xl text-center">
-    <h2 class="text-4xl font-bold mb-6">Connect for Infrastructure Strategy</h2>
-    <div class="flex justify-center gap-12 mt-12 text-sm">
-      <a href="https://www.linkedin.com/in/satvik-mishra-aa18062aa" class="text-sky-400">LinkedIn</a>
-      <a href="https://github.com/auroraeye-dev" class="text-white">GitHub</a>
-      <a href="mailto:contact@satvikmishra.com" class="text-amber-400">Email</a>
     </div>
   </div>
 </section>
