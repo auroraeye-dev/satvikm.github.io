@@ -1,105 +1,68 @@
 # 👨‍💻 Satvik Mishra | GitHub Portfolio
 
-Welcome to my technical project portfolio! I’m an engineer exploring and building tools in **cloud computing, cybersecurity, data architecture, and AI**. This repository includes working projects, documentation, and automation scripts I’ve created or compiled.
-
----
-
-## 🧠 AI Voice Assistant – Beast 🧠
-
-A personal assistant powered by speech recognition, GPT-3.5, News API, and automation libraries like `pyautogui`.
-
-🔹 Features:
-- Voice-controlled Google/Youtube/Instagram/etc.
-- Music playback with skip-ad support
-- News fetching via NewsAPI
-- OpenAI GPT-3.5 responses to custom prompts
-
-📁 Files:
-- `beast_ai.py`  
-- `musiclibrary.py`  
-- `openaiintegration.py`  
-- `skip_button.py`  
-- `google_search.py`  
-
-📸 Example command:  
-> “Wake up” → “Open YouTube” → auto skips ads → responds to follow-ups using AI.
-
-📎 Dependencies: `speech_recognition`, `pyttsx3`, `pyautogui`, `openai`, `newsapi`
+Welcome to my technical project portfolio. I’m an engineer exploring and building solutions in **cloud computing, data architecture, and infrastructure automation**.  
+This repository now focuses on **AWS deployment, networking, monitoring, and modern data architecture concepts**, documented in detail.
 
 ---
 
 ## ☁️ AWS Deployment & Monitoring Automation
 
-📄 `AWS Deployment and Monitoring Automation using VS Code.docx`
+📄 **AWS Deployment and Monitoring Automation using VS Code.docx**
 
-A detailed technical document outlining:
-- Steps to deploy applications on AWS using Visual Studio Code
-- Monitoring with AWS CloudWatch and dashboards
-- DevOps CI/CD integration options
+A detailed technical document covering:
+
+- Deploying applications on AWS using Visual Studio Code  
+- Resource provisioning and configuration  
+- Monitoring using AWS CloudWatch  
+- Creating dashboards and alarms  
+- Overview of CI/CD and DevOps integration concepts  
+
+This document is intended for beginners to intermediate users looking to understand real-world AWS deployment workflows.
 
 ---
 
 ## 🌐 AWS Site-to-Site VPN Setup
 
-📄 `AWS site to site VPN.website.docx`
+📄 **AWS site to site VPN.website.docx**
 
-A beginner-to-advanced guide for configuring:
-- Site-to-site VPN on AWS
-- Tunnel configuration, route tables, and testing
-- Security best practices
+A step-by-step guide explaining:
+
+- Site-to-site VPN architecture on AWS  
+- Tunnel configuration and routing  
+- Route tables, gateways, and connectivity testing  
+- Security considerations and best practices  
+
+Useful for understanding hybrid cloud networking and secure on-prem to AWS connectivity.
 
 ---
 
 ## 🧱 Data Lake vs Lakehouse (Medallion Architecture)
 
-📄 `upload_data_doc.docx`
+📄 **upload_data_doc.docx**
 
-A concept and architecture breakdown:
-- Difference between data lake, warehouse, and lakehouse
-- Medallion architecture (Bronze, Silver, Gold layers)
-- Implemented using **Databricks + Delta Lake**
+A conceptual and architectural breakdown of modern data systems:
 
-Useful for those exploring modern data engineering pipelines.
+- Data Lake vs Data Warehouse vs Lakehouse  
+- Medallion architecture (Bronze, Silver, Gold layers)  
+- Design principles using **Databricks + Delta Lake**  
 
----
-
-## 🔎 OpenAI + Google Search Automation
-
-🧠 `openaiintegration.py`  
-🌍 `google_search.py`  
-
-Combines LLM-generated queries with automated Google search. You speak → GPT refines → searches Google → displays top results.
+Helpful for those exploring **data engineering, analytics platforms, and scalable data pipelines**.
 
 ---
 
-## ⏩ YouTube Ad Skipper (Image-based)
+## 🛠️ Tools & Platforms Referenced
 
-📌 `skip_button.py`  
-🖼 Requires screenshot image of “Skip Ad” button
-
-Uses `pyautogui` to find the button and click it automatically after timeout.
-
----
-
-## 🔧 Tools Used Across Projects
-
-- Python 3.10+
-- Libraries: `speech_recognition`, `pyttsx3`, `openai`, `pyautogui`, `newsapi-python`, `requests`
-- Platform: Windows 10+ (with mic access)
-- IDEs: VS Code, Jupyter Notebook
-- Cloud: AWS (EC2, S3, CloudWatch, Site-to-Site VPN)
+- AWS (EC2, S3, CloudWatch, Site-to-Site VPN)  
+- Databricks & Delta Lake  
+- Visual Studio Code  
+- Documentation-first engineering approach  
 
 ---
 
-## 📁 Folder Summary
+## 📁 Repository Structure
 
 ```txt
 .
-├── beast_ai.py
-├── musiclibrary.py
-├── google_search.py
-├── openaiintegration.py
-├── skip_button.py
 ├── AWS Deployment and Monitoring Automation using VS Code.docx
 ├── AWS site to site VPN.website.docx
 ├── upload_data_doc.docx
